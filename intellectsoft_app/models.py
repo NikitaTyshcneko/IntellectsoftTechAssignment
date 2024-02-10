@@ -8,7 +8,7 @@ class Client(models.Model):
     phone = models.CharField(max_length=15)
 
     def __str__(self):
-        return f"{self.first_name} {self.last_name} {self.phone}"
+        return f"{self.first_name} {self.last_name}"
 
 
 class Request(models.Model):
@@ -18,6 +18,7 @@ class Request(models.Model):
         ('Rejected', 'Rejected'),
     ]
 
+    client = models.ForeignKey(Client, on_delete=models.CASCADE, null=False)
     body = models.TextField()
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='Pending')
     processed_by = models.ForeignKey('Operator', on_delete=models.SET_NULL, null=True)
