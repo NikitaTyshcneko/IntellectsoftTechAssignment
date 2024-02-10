@@ -1,0 +1,20 @@
+[
+    {
+        "model": "intellectsoft_app.client",
+        "pk": 1,
+        "fields": {
+            "first_name": "Ross",
+            "last_name": "Geller",
+            "phone": "123456789"
+        }
+    },
+    {
+        "model": "intellectsoft_app.client",
+        "pk": 2,
+        "fields": {
+            "first_name": "Monica",
+            "last_name": "Geller",
+            "phone": "987654321"
+        }
+    }
+]
