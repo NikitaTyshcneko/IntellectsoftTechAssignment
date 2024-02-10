@@ -50,7 +50,11 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ],
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 20
 }
+
+LOGIN_REDIRECT_URL = '/api/v1/clients/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
