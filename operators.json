@@ -1,0 +1,18 @@
+[
+    {
+        "model": "intellectsoft_app.operator",
+        "pk": 1,
+        "fields": {
+            "first_name": "Joe",
+            "last_name": "Tribbiani"
+        }
+    },
+    {
+        "model": "intellectsoft_app.operator",
+        "pk": 2,
+        "fields": {
+            "first_name": "Chandler",
+            "last_name": "Bing"
+        }
+    }
+]
