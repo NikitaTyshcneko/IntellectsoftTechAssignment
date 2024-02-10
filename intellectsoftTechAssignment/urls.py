@@ -17,10 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
+from intellectsoft_app.views import logout_request
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/v1/', include('intellectsoft_app.api.urls')),
     path('api/v1/auth/', include('rest_framework.urls')),
+    path('api/v1/logout/', logout_request, name='logout'),
     path('api/v1/schema/', SpectacularAPIView.as_view(), name='api-schema'),
     path('api/v1/docs/', SpectacularSwaggerView.as_view(url_name='api-schema'), name='api-docs'),
 ]
