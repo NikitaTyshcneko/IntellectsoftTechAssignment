@@ -11,7 +11,6 @@ class ClientSerializer(serializers.ModelSerializer):
 class RequestSerializer(serializers.ModelSerializer):
     status = serializers.ReadOnlyField()
     processed_by = serializers.SerializerMethodField()
-    client = serializers.SerializerMethodField()
 
     def get_processed_by(self, obj):
         if obj.processed_by:
